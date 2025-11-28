@@ -1,5 +1,6 @@
 // Run code after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Select DOM elements
     const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
@@ -8,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function addTask() {
         const taskText = taskInput.value.trim();
 
+        // Prevent empty tasks
         if (taskText === "") {
             alert("Please enter a task!");
             return;
